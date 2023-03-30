@@ -2,7 +2,7 @@
 # Dont know what question to come up with
 print("Welcome to my first python program, here is an attempt to make a calculator")
 correct = False
-verison = input("Basic(1) or Advance(2) version?")
+verison = input("Basic(1) or Advance(2) version? ")
 operators = ['+','-','*','x','/','%']
 match verison:
     case '1':
@@ -41,3 +41,22 @@ match verison:
                 print("Lets try again")
                 correct = False
         for i in operators:
+            if i in userInput:
+                vals = userInput.split(i)
+                match i:
+                    case '*':
+                        print("Result is: %0.2f" %(float(vals[0])*float(vals[1])))
+                    case 'x':
+                        print("Result is: %0.2f" %(float(vals[0])*float(vals[1])))
+                    case '+':
+                        print("Result is: %0.2f" %(float(vals[0])+float(vals[1])))
+                    case '-':
+                        print("Result is: %0.2f" %(float(vals[0])-float(vals[1])))
+                    case '/':
+                        print("Result is: %0.2f" %(float(vals[0])/float(vals[1])))
+                    case '%':
+                        print("Result is: %0.2f" %(float(vals[0])/float(vals[1])))
+                    case other:
+                        print("Sorry cannot interpret calculation")
+                break
+                        
